@@ -10,6 +10,7 @@ import UIKit
 
 class ProgrammaticController: UIViewController {
     var firstView: UIView?
+    var firstLabel: UILabel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,18 +19,15 @@ class ProgrammaticController: UIViewController {
         guard firstView != nil else {return}
         firstView?.layer.cornerRadius = 10
         view.addSubview(firstView!)
-        print("frame -> \(firstView!.frame)")
-        print("bounds -> \(firstView!.bounds)")
         
-        let secondView = UIView(frame: firstView!.frame)
-        secondView.center.y += 100
-        secondView.backgroundColor = UIColor.darkGray
-        view.addSubview(secondView)
+        firstLabel = UILabel(frame: CGRect(x: 0, y: firstView!.frame.maxY + 20 , width: view.frame.width, height: 50))
+        firstLabel?.text = "Text"
+        firstLabel?.numberOfLines = 1
+        firstLabel?.textColor = UIColor.red
+        firstLabel?.font = UIFont(name: "Chalkduster", size: 20)
+        firstLabel?.textAlignment = .center
+        view.addSubview(firstLabel!)
         
-        let threeView = UIView(frame: firstView!.bounds)
-        threeView.center.y +=  200
-        threeView.backgroundColor = UIColor.red
-        view.addSubview(threeView)
-        
+
     }
 }
