@@ -11,6 +11,7 @@ import UIKit
 class ProgrammaticController: UIViewController {
     var firstView: UIView?
     var firstLabel: UILabel?
+    var firstButton: UIButton?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,11 @@ class ProgrammaticController: UIViewController {
         firstLabel?.font = UIFont(name: "Chalkduster", size: 20)
         firstLabel?.textAlignment = .center
         view.addSubview(firstLabel!)
+        let rectButton = CGRect(x: view.frame.width / 2 - 75, y: firstLabel.frame.maxY + 20, width: 150, height: 40)
+        firstButton = UIButton(frame: rectButton)
+        firstButton?.setTitle("Appuyer", for: .normal)
+        firstButton?.tintColor = UIColor.red
+        
         
 
     }
