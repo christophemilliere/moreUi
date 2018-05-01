@@ -17,14 +17,28 @@
                     <view key="view" contentMode="scaleToFill" id="fai-Gf-KfS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cwf-Te-x6f">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3520319462" green="0.55211168529999999" blue="0.7929778099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cwf-Te-x6f" firstAttribute="trailing" secondItem="qqA-fc-JZZ" secondAttribute="trailing" id="Bah-uT-aQc"/>
+                            <constraint firstItem="cwf-Te-x6f" firstAttribute="bottom" secondItem="qqA-fc-JZZ" secondAttribute="bottom" id="JHD-4w-HM8"/>
+                            <constraint firstItem="cwf-Te-x6f" firstAttribute="leading" secondItem="qqA-fc-JZZ" secondAttribute="leading" id="PxH-lU-v5l"/>
+                            <constraint firstItem="cwf-Te-x6f" firstAttribute="top" secondItem="fai-Gf-KfS" secondAttribute="top" id="bGt-QF-3Np"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="qqA-fc-JZZ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="jWw-I9-5hp"/>
+                    <connections>
+                        <outlet property="scrollView" destination="cwf-Te-x6f" id="npf-rd-SEM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ht-Tg-HA3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="500" y="280"/>
+            <point key="canvasLocation" x="500" y="279.31034482758622"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="oMF-wK-E1L">

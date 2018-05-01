@@ -14,13 +14,15 @@ class ProgrammaticController: UIViewController {
     var firstButton: UIButton?
     var firstIv: UIImageView?
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         firstView = UIView(frame: CGRect(x: 30, y: 60, width: 200, height: 50))
         firstView?.backgroundColor = UIColor(red: 30 / 255, green: 123 / 255, blue: 90 / 255, alpha: 1)
         guard firstView != nil else {return}
         firstView?.layer.cornerRadius = 10
-        view.addSubview(firstView!)
+        scrollView.addSubview(firstView!)
         
         firstLabel = UILabel(frame: CGRect(x: 0, y: firstView!.frame.maxY + 20 , width: view.frame.width, height: 50))
         firstLabel?.text = "Text"
@@ -28,7 +30,7 @@ class ProgrammaticController: UIViewController {
         firstLabel?.textColor = UIColor.red
         firstLabel?.font = UIFont(name: "Chalkduster", size: 20)
         firstLabel?.textAlignment = .center
-        view.addSubview(firstLabel!)
+        scrollView.addSubview(firstLabel!)
         
         let rectButton = CGRect(x: view.frame.width / 2 - 75, y: firstLabel!.frame.maxY + 20, width: 150, height: 40)
         firstButton = UIButton(frame: rectButton)
@@ -38,7 +40,7 @@ class ProgrammaticController: UIViewController {
         firstButton?.backgroundColor = UIColor.black
         firstButton?.layer.borderColor = UIColor.white.cgColor
         
-        view.addSubview(firstButton!)
+        scrollView.addSubview(firstButton!)
         
         firstButton?.addTarget(self, action: #selector(actionButton), for: .touchUpInside)
         let largeur = view.frame.width - 60
@@ -51,9 +53,22 @@ class ProgrammaticController: UIViewController {
         firstIv!.layer.cornerRadius = firstIv!.frame.width / 2
         firstIv!.isUserInteractionEnabled = true
         firstIv?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(changeImage)))
-        view.addSubview(firstIv!)
-//        view.sendSubview(toBack: firstIv!)
-        view.bringSubview(toFront: firstButton!)
+        scrollView.addSubview(firstIv!)
+//        scrollView.sendSubview(toBack: firstIv!)
+        scrollView.bringSubview(toFront: firstButton!)
+        
+        let colors: [UIColor] = [.red, .black, .blue, .brown]
+        var max: CGFloat = (firstIv?.frame.maxY)!
+        
+        for color in colors {
+            print(color)
+            let viewColor = UIView(frame: CGRect(x: 0, y: max + 5, width: 100, height: 100))
+            viewColor.backgroundColor = color
+            scrollView.addSubview(viewColor)
+            max = view.frame.maxY
+        }
+        
+        scrollView.contentSize = CGSize(width: view.frame.width, height: max + 100)
     }
     
     @objc func changeImage(){
