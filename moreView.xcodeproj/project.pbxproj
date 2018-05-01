@@ -13,6 +13,7 @@
 		C1ABCADE2096161900283DA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1ABCADC2096161900283DA4 /* LaunchScreen.storyboard */; };
 		C1ABCAE620961C4200283DA4 /* CycleAndFrameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ABCAE520961C4200283DA4 /* CycleAndFrameController.swift */; };
 		C1ABCAE82096367400283DA4 /* ProgrammaticController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ABCAE72096367400283DA4 /* ProgrammaticController.swift */; };
+		C1ABCAEA2098800D00283DA4 /* skull-apple2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1ABCAE92098800D00283DA4 /* skull-apple2.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C1ABCADF2096161900283DA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1ABCAE520961C4200283DA4 /* CycleAndFrameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleAndFrameController.swift; sourceTree = "<group>"; };
 		C1ABCAE72096367400283DA4 /* ProgrammaticController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammaticController.swift; sourceTree = "<group>"; };
+		C1ABCAE92098800D00283DA4 /* skull-apple2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "skull-apple2.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				C1ABCAE72096367400283DA4 /* ProgrammaticController.swift */,
 				C1ABCAE520961C4200283DA4 /* CycleAndFrameController.swift */,
 				C1ABCADA2096161900283DA4 /* Assets.xcassets */,
+				C1ABCAE92098800D00283DA4 /* skull-apple2.jpg */,
 				C1ABCADC2096161900283DA4 /* LaunchScreen.storyboard */,
 				C1ABCADF2096161900283DA4 /* Info.plist */,
 			);
@@ -128,6 +131,7 @@
 				C1ABCADE2096161900283DA4 /* LaunchScreen.storyboard in Resources */,
 				C1ABCADB2096161900283DA4 /* Assets.xcassets in Resources */,
 				C1ABCAD92096161800283DA4 /* Main.storyboard in Resources */,
+				C1ABCAEA2098800D00283DA4 /* skull-apple2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

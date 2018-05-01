@@ -12,6 +12,7 @@ class ProgrammaticController: UIViewController {
     var firstView: UIView?
     var firstLabel: UILabel?
     var firstButton: UIButton?
+    var firstIv: UIImageView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +41,23 @@ class ProgrammaticController: UIViewController {
         view.addSubview(firstButton!)
         
         firstButton?.addTarget(self, action: #selector(actionButton), for: .touchUpInside)
+        let largeur = view.frame.width - 60
+        let rectIv = CGRect(x: 30, y: (view.frame.height / 2) - (largeur / 2), width: largeur, height: largeur)
+        firstIv = UIImageView(frame: rectIv)
+        firstIv?.image = UIImage(named: "skull-apple2")
+        firstIv?.contentMode = .scaleAspectFill
+        firstIv?.clipsToBounds = true
+        
+        firstIv!.layer.cornerRadius = firstIv!.frame.width / 2
+        firstIv!.isUserInteractionEnabled = true
+        firstIv?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(changeImage)))
+        view.addSubview(firstIv!)
+//        view.sendSubview(toBack: firstIv!)
+        view.bringSubview(toFront: firstButton!)
+    }
+    
+    @objc func changeImage(){
+        firstIv?.image = UIImage(named: "skull-apple")
     }
     
     @objc func actionButton(){
