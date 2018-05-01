@@ -28,12 +28,21 @@ class ProgrammaticController: UIViewController {
         firstLabel?.font = UIFont(name: "Chalkduster", size: 20)
         firstLabel?.textAlignment = .center
         view.addSubview(firstLabel!)
-        let rectButton = CGRect(x: view.frame.width / 2 - 75, y: firstLabel.frame.maxY + 20, width: 150, height: 40)
+        
+        let rectButton = CGRect(x: view.frame.width / 2 - 75, y: firstLabel!.frame.maxY + 20, width: 150, height: 40)
         firstButton = UIButton(frame: rectButton)
         firstButton?.setTitle("Appuyer", for: .normal)
-        firstButton?.tintColor = UIColor.red
+        firstButton?.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        firstButton?.tintColor = UIColor.white
+        firstButton?.backgroundColor = UIColor.black
+        firstButton?.layer.borderColor = UIColor.white.cgColor
         
+        view.addSubview(firstButton!)
         
-
+        firstButton?.addTarget(self, action: #selector(actionButton), for: .touchUpInside)
+    }
+    
+    @objc func actionButton(){
+        print("coucou button")
     }
 }
